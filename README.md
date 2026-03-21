@@ -31,7 +31,7 @@ Most editors say they are "private." We mean it. We use **WebAssembly (Wasm)** a
 
 - **💎 Pro-Editor**: A full-featured timeline editor with transitions, layers, and realtime preview.
 - **🧠 AI Assistant**: Talk to your video. Ask questions, generate captions, and automate edits.
-- **🚀 200+ Micro-Tools**:
+- **🚀 Professional Micro-Tools**:
   - `Trim` | `Compress` | `Convert` | `Reverse` | `Merge`
   - `Audio Visualizers` | `Subtitles` | `GIF Maker` | `Color Correction`
 - **📂 No File Size Limit**: Since we process locally, your only limit is your disk space.
