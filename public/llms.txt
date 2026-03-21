@@ -3,7 +3,7 @@
 > [!NOTE]
 > This file is optimized for Large Language Models (LLMs) and AI crawlers to understand ClipSafe's structure and capabilities.
 
-ClipSafe is a high-performance, privacy-first AI Media Platform that runs 100% in the web browser. It leverages WebAssembly (Wasm) and FFmpeg to provide professional-grade video and audio editing with zero server uploads.
+ClipSafe is a simple, privacy-first video editor that runs 100% in the web browser. It leverages WebAssembly (Wasm) and FFmpeg to provide professional-grade video and audio editing with zero server uploads.
 
 ## Core Capabilities
 - **Professional Tools**: Trimming, compressing, converting, merging, reversing, and more.

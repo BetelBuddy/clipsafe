@@ -1,7 +1,7 @@
 # ClipSafe: Private Browser-Based Video Editing
-**0.0.1 Beta** | *The Decentralized AI Media Platform*
+**0.0.1 Beta** | *Private Browser-Based Video Editor*
 
-ClipSafe is a modern, privacy-first video editing platform that runs entirely in your web browser. It provides a comprehensive suite of professional tools for video and audio processing without ever requiring you to upload your files to a server.
+ClipSafe is a simple, privacy-first video editor that runs entirely in your web browser. It provides a professional suite of tools for video and audio processing without ever requiring you to upload your files to a server.
 
 
 ## 🌟 Key Selling Points

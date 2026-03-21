@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 🎬 ClipSafe: The AI Content Suite
+# 🎬 ClipSafe: Private Browser-Based Video Editor
 **Privacy-First. Serverless. Browser-Side AI. Unstoppable.**
 
 [![0.0.1 Beta](https://img.shields.io/badge/version-0.0.1--Beta-blueviolet?style=for-the-badge)](https://github.com/BetelBuddy/clipsafe)
