@@ -13,7 +13,7 @@ ClipSafe is a **Browser-side AI Media Platform**. It avoids server-side processi
 - **Component Standard**: React + Shadcn UI + Tailwind CSS.
 
 ## Key Files for Agents
-- [toolRegistry.ts](src/lib/toolRegistry.ts): Index of all 200+ micro-tools.
+- [toolRegistry.ts](src/lib/toolRegistry.ts): Index of all micro-tools.
 - [ai.ts](src/lib/ai.ts): LLM integration and tool-calling logic.
 - [AppLayout.tsx](src/pages/AppLayout.tsx): The main shell of the editor platform.
 

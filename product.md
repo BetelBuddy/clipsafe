@@ -9,12 +9,12 @@ ClipSafe is a modern, privacy-first video editing platform that runs entirely in
 - **No Uploads**: Since there's no server-side processing, you don't waste data or time uploading/downloading large files.
 - **No Accounts**: Start editing immediately. No sign-up, no logs, no tracking.
 - **Works Offline**: Once loaded, most tools can function without an internet connection.
-- **202 Professional Tools**: A massive collection of specific utilities across 15 categories.
+- **Professional Tools**: A massive collection of specific utilities across multiple categories.
 - **Zero File Size limits**: Limited only by your device's memory and disk space.
 
 ## 🛠️ Core Features & Tools
 
-ClipSafe offers exactly **202 professional tools** organized into **15 categories**:
+ClipSafe offers a massive collection of **professional tools** organized into several categories:
 
 ### Video Tools
 - **Trim**: Precise cutting and trimming of video clips.

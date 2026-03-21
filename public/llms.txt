@@ -6,7 +6,7 @@
 ClipSafe is a high-performance, privacy-first AI Media Platform that runs 100% in the web browser. It leverages WebAssembly (Wasm) and FFmpeg to provide professional-grade video and audio editing with zero server uploads.
 
 ## Core Capabilities
-- **200+ Professional Tools**: Trimming, compressing, converting, merging, reversing, and more.
+- **Professional Tools**: Trimming, compressing, converting, merging, reversing, and more.
 - **Autonomous AI Agent**: LLM-integrated editor assistant that can execute multi-step ffmpeg workflows from plain-text prompts.
 - **Zero-Upload Pipeline**: Processing happens entirely on the client-side device sandbox.
 - **WasmFFmpeg Engine**: Desktop-grade performance in a browser environment.
@@ -20,7 +20,7 @@ ClipSafe is a high-performance, privacy-first AI Media Platform that runs 100% i
 ## Key Resources
 - [Main Landing Page](https://clipsafe.app/) - Project overview and tool discovery.
 - [AI Video Editor](https://clipsafe.app/editor) - Pro-grade timeline and AI assistant.
-- [Tools Browser](https://clipsafe.app/tools) - Full index of 202 specialized utilities.
+- [Tools Browser](https://clipsafe.app/tools) - Full index of specialized utilities.
 - [GitHub Repository](https://github.com/BetelBuddy/clipsafe) - Open source code, contribution guides, and documentation.
 - [Changelog](https://github.com/BetelBuddy/clipsafe/blob/main/CHANGELOG.md) - Release history for Version 0.0.1 Beta.
 

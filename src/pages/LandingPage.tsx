@@ -24,11 +24,11 @@ const tools = [
   { icon: Wrench, title: 'Utilities', desc: 'Rotate, speed, stabilize, watermark and more', path: '/app/tools' },
 ];
 
-const badges = ['✓ No Upload', '✓ No Account', '✓ Works Offline', '✓ No File Size Limit', '✓ 200+ Tools', '✓ GDPR Compliant'];
+const badges = ['✓ No Upload', '✓ No Account', '✓ Works Offline', '✓ No File Size Limit', '✓ Professional Tools', '✓ GDPR Compliant'];
 
 const steps = [
   { icon: Film, title: 'Drop your video', desc: 'Drag and drop or click to select any video file.' },
-  { icon: Zap, title: 'Choose your tool', desc: 'Pick from 200+ tools across 10 categories.' },
+  { icon: Zap, title: 'Choose your tool', desc: 'Pick from a massive collection of professional tools.' },
   { icon: ChevronRight, title: 'Download instantly', desc: 'Get your processed video — never uploaded anywhere.' },
 ];
 
@@ -93,7 +93,7 @@ export default function LandingPage() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-lg md:text-xl text-muted-foreground mt-6 max-w-2xl mx-auto"
           >
-            200+ tools to trim, compress, convert, merge and more — right in your browser. Zero uploads. Zero accounts. AI-powered editor included.
+            A massive collection of professional tools to trim, compress, convert, merge and more — right in your browser. Zero uploads. Zero accounts. AI-powered editor included.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function LandingPage() {
             </Link>
             <Link to="/tools">
               <Button size="lg" variant="outline" className="px-8 text-base border-border hover:bg-surface-elevated">
-                Browse all 200+ tools
+                Browse all Professional Tools
               </Button>
             </Link>
           </motion.div>
@@ -127,7 +127,7 @@ export default function LandingPage() {
       {/* Tools Grid */}
       <section id="tools" className="max-w-7xl mx-auto px-6 py-20">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Everything you need</h2>
-        <p className="text-muted-foreground text-center mb-12">200+ professional video tools, all running locally in your browser</p>
+        <p className="text-muted-foreground text-center mb-12">Professional video tools, all running locally in your browser</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {tools.map((tool, i) => (
             <motion.div
@@ -155,7 +155,7 @@ export default function LandingPage() {
         <div className="text-center mt-8">
           <Link to="/tools">
             <Button variant="outline" size="lg">
-              See all 200+ tools <ChevronRight className="w-4 h-4 ml-1" />
+              See all Professional Tools <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
           </Link>
         </div>
@@ -198,7 +198,7 @@ export default function LandingPage() {
             <img src="/logo.png" className="w-8 md:w-12 h-8 md:h-12 object-contain" alt="ClipSafe Logo" />
             <span className="font-medium text-foreground">ClipSafe</span>
           </div>
-          <p>Powered by FFmpeg.wasm · 200+ tools · Runs 100% in your browser</p>
+          <p>Powered by FFmpeg.wasm · Professional Tools · Runs 100% in your browser</p>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <span className="text-[10px] opacity-50 select-none">|</span>
