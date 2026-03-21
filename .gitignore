@@ -26,8 +26,6 @@ dist-ssr/
 .DS_Store
 Thumbs.db
 
-# Documentation & Specs (Private)
-product.md
 
 # Editors
 .vscode/
