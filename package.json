@@ -2,7 +2,7 @@
   "name": "clipsafe",
   "private": false,
   "version": "0.0.1",
-  "description": "Privacy-first, AI-powered media platform running 100% in the browser.",
+  "description": "Private, 100% browser-based video editor. No uploads. No accounts. Powered by FFmpeg.wasm.",
   "author": "BetelBuddy (@BetelBuddy) & Aakash Kargathara (@imkaakash)",
   "repository": {
     "type": "git",
@@ -14,12 +14,12 @@
   "homepage": "https://clipsafe.app",
   "keywords": [
     "video-editor",
-    "ai",
-    "privacy",
     "ffmpeg-wasm",
-    "browser-side",
-    "content-creation",
-    "media-platform"
+    "privacy-first",
+    "webassembly",
+    "browser-based",
+    "serverless",
+    "no-upload"
   ],
   "license": "MIT",
   "type": "module",
