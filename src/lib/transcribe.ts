@@ -236,7 +236,7 @@ function parseTranscriptionJSON(text: string): CaptionSegment[] {
   if (cleaned.endsWith('```')) cleaned = cleaned.slice(0, -3);
   cleaned = cleaned.trim();
 
-  let parsed: any;
+  let parsed: { segments?: Array<{ words?: Array<{ text?: string; start?: number; end?: number; confidence?: number }>; speaker?: string }> };
   try {
     parsed = JSON.parse(cleaned);
   } catch {
@@ -247,8 +247,8 @@ function parseTranscriptionJSON(text: string): CaptionSegment[] {
   const rawSegments = parsed.segments || [];
   if (rawSegments.length === 0) return [];
 
-  return rawSegments.map((seg: any, si: number) => {
-    const words: CaptionWord[] = (seg.words || []).map((w: any, wi: number) => ({
+  return rawSegments.map((seg: { words?: Array<{ text?: string; start?: number; end?: number; confidence?: number }>; speaker?: string }, si: number) => {
+    const words: CaptionWord[] = (seg.words || []).map((w: { text?: string; start?: number; end?: number; confidence?: number }, wi: number) => ({
       id: `w-${si}-${wi}-${crypto.randomUUID().slice(0, 8)}`,
       text: w.text || '',
       start: w.start || 0,
@@ -290,8 +290,8 @@ function parseTranscriptionJSON(text: string): CaptionSegment[] {
   });
 }
 
-function parseWhisperResponse(data: any): CaptionSegment[] {
-  const words: CaptionWord[] = (data.words || []).map((w: any, i: number) => ({
+function parseWhisperResponse(data: { words?: { word: string; start: number; end: number }[] }): CaptionSegment[] {
+  const words: CaptionWord[] = (data.words || []).map((w: { word: string; start: number; end: number }, i: number) => ({
     id: `w-0-${i}-${crypto.randomUUID().slice(0, 8)}`,
     text: w.word || '',
     start: w.start || 0,

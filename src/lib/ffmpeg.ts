@@ -78,8 +78,8 @@ export async function runFFmpegCommand(
   const blob = new Blob([rawData as BlobPart], { type: getMimeType(outputFileName) });
   const url = URL.createObjectURL(blob);
 
-  try { await ffmpeg.deleteFile('input'); } catch {}
-  try { await ffmpeg.deleteFile(outputFileName); } catch {}
+  try { await ffmpeg.deleteFile('input'); } catch (e) { /* Intentionally empty */ }
+  try { await ffmpeg.deleteFile(outputFileName); } catch (e) { /* Intentionally empty */ }
 
   store.setOutput(url, blob.size, outputFileName);
   return { url, size: blob.size };

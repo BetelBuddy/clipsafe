@@ -227,7 +227,13 @@ export function useKeyboardShortcuts() {
       if (e.code === 'Space') {
         e.preventDefault();
         const video = document.querySelector<HTMLVideoElement>('video');
-        if (video) video.paused ? video.play() : video.pause();
+        if (video) {
+          if (video.paused) {
+            video.play().catch(e => console.error("Auto-play failed:", e));
+          } else {
+            video.pause();
+          }
+        }
         return;
       }
 
@@ -241,7 +247,7 @@ export function useKeyboardShortcuts() {
         return;
       }
     }
-  }, [navigate, fileUrl, isEditor]);
+  }, [navigate, fileUrl, isEditor, jklDirection, jklSpeedIndex]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKey);

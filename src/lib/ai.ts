@@ -212,7 +212,7 @@ export function executeToolCall(name: string, args: Record<string, unknown>): st
         property,
         time,
         value,
-        easing: easing as any,
+        easing: easing as 'linear' | 'ease-in' | 'ease-out' | 'ease-in-out',
       });
       return `Added keyframe: ${property}=${value} at ${time.toFixed(2)}s with ${easing} easing on "${selectedClip.label}"`;
     }
@@ -385,7 +385,7 @@ function flushPendingToolCalls(
     let parsedArgs: Record<string, unknown> = {};
     try { parsedArgs = JSON.parse(tc.args || '{}'); } catch {
       // Try to salvage partial JSON
-      try { parsedArgs = JSON.parse(tc.args + '}'); } catch {}
+      try { parsedArgs = JSON.parse(tc.args + '}'); } catch (e) { /* Intentionally empty: partial JSON salvage */ }
     }
 
     // Ensure we emitted the "calling" status
@@ -672,7 +672,7 @@ async function streamAnthropic(
           if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
             callbacks.onDelta(parsed.delta.text);
           }
-        } catch {}
+        } catch (e) { /* Intentionally empty: silent JSON parse fallback */ }
       }
     }
 

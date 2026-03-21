@@ -122,7 +122,7 @@ function KeyframeRow({
       <span className="font-mono w-10 text-right">{kf.value.toFixed(2)}</span>
       <select
         value={kf.easing}
-        onChange={(e) => onUpdate({ easing: e.target.value as any })}
+        onChange={(e) => onUpdate({ easing: e.target.value as Keyframe['easing'] })}
         className="h-5 text-[9px] bg-transparent border border-border rounded px-0.5"
         onClick={(e) => e.stopPropagation()}
       >

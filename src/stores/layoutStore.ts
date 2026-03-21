@@ -53,7 +53,7 @@ function loadLayout(): { preset: LayoutPreset; panelSizes: PanelSizes } {
       const parsed = JSON.parse(raw);
       return { preset: parsed.preset || 'default', panelSizes: parsed.panelSizes || PRESETS.default };
     }
-  } catch {}
+  } catch (e) { /* Intentionally empty: localStorage might be blocked or corrupted */ }
   return { preset: 'default', panelSizes: PRESETS.default };
 }
 

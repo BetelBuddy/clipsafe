@@ -89,7 +89,7 @@ function MobileLayout() {
     <div className="h-screen flex flex-col bg-background">
       <ToolBar />
       <div className="flex-1 overflow-hidden">
-        <Tabs value={activeMobileTab} onValueChange={(v) => setActiveMobileTab(v as any)} className="h-full flex flex-col">
+        <Tabs value={activeMobileTab} onValueChange={(v) => setActiveMobileTab(v as typeof activeMobileTab)} className="h-full flex flex-col">
           <div className="flex-1 overflow-hidden">
             <TabsContent value="preview" className="h-full m-0"><PreviewPlayer /></TabsContent>
             <TabsContent value="timeline" className="h-full m-0"><Timeline /></TabsContent>

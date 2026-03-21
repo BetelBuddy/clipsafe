@@ -7,7 +7,8 @@ import { useEditorStore } from '@/stores/editorStore';
 import { useCaptionsStore } from '@/stores/captionsStore';
 import { useVideoStore } from '@/stores/videoStore';
 import { loadFFmpeg, fetchFile, triggerDownload } from '@/lib/ffmpeg';
-import { buildExportArgs, DEFAULT_CAPTION_STYLE } from '@/lib/exportPipeline';
+import { buildExportArgs } from '@/lib/exportPipeline';
+import { DEFAULT_CAPTION_STYLE } from '@/lib/captionStyles';
 import { cn } from '@/lib/utils';
 
 interface Props { onClose: () => void; }
@@ -93,7 +94,7 @@ export function BatchExportModal({ onClose }: Props) {
           const url = URL.createObjectURL(blob);
           triggerDownload(url, `export-${platform.id}.${platform.format}`);
           
-          try { await ffmpeg.deleteFile(outputFileName); } catch {}
+          try { await ffmpeg.deleteFile(outputFileName); } catch (e) { /* Intentionally empty */ }
           setStatuses(prev => ({ ...prev, [platform.id]: 'done' }));
         } catch (err) {
           console.error(`Export failed for ${platform.label}:`, err);
@@ -101,7 +102,7 @@ export function BatchExportModal({ onClose }: Props) {
         }
       }
 
-      try { await ffmpeg.deleteFile('input'); } catch {}
+      try { await ffmpeg.deleteFile('input'); } catch (e) { /* Intentionally empty */ }
     } catch (err) {
       console.error('Batch export failed:', err);
     } finally {

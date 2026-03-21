@@ -1,4 +1,4 @@
-import { type CaptionStyle, DEFAULT_CAPTION_STYLE } from './CaptionOverlay';
+import { type CaptionStyle, DEFAULT_CAPTION_STYLE } from '@/lib/captionStyles';
 import { Slider } from '@/components/ui/slider';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';

@@ -7,7 +7,8 @@ import { useEditorStore } from '@/stores/editorStore';
 import { useCaptionsStore } from '@/stores/captionsStore';
 import { useVideoStore } from '@/stores/videoStore';
 import { loadFFmpeg, fetchFile, triggerDownload } from '@/lib/ffmpeg';
-import { buildExportArgs, getExportSummary, DEFAULT_CAPTION_STYLE } from '@/lib/exportPipeline';
+import { buildExportArgs, getExportSummary } from '@/lib/exportPipeline';
+import { DEFAULT_CAPTION_STYLE } from '@/lib/captionStyles';
 import { Progress } from '@/components/ui/progress';
 
 interface Props { onClose: () => void; }
@@ -60,8 +61,8 @@ export function ExportModal({ onClose }: Props) {
       const url = URL.createObjectURL(blob);
       triggerDownload(url, `export.${format}`);
 
-      try { await ffmpeg.deleteFile('input'); } catch {}
-      try { await ffmpeg.deleteFile(outputFileName); } catch {}
+      try { await ffmpeg.deleteFile('input'); } catch (e) { /* Intentionally empty */ }
+      try { await ffmpeg.deleteFile(outputFileName); } catch (e) { /* Intentionally empty */ }
     } catch (err) {
       console.error('Export failed:', err);
     } finally {

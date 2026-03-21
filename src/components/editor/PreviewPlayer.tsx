@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { formatTimecode } from '@/lib/ffmpeg';
 import { buildMediaFile } from '@/lib/mediaImport';
-import { CaptionOverlay, DEFAULT_CAPTION_STYLE, type CaptionStyle } from './CaptionOverlay';
+import { CaptionOverlay } from './CaptionOverlay';
+import { DEFAULT_CAPTION_STYLE, type CaptionStyle } from '@/lib/captionStyles';
 import { CaptionPropertiesPanel } from './CaptionPropertiesPanel';
 
 const PLAYBACK_RATES = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 2];

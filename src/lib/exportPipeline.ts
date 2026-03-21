@@ -1,6 +1,8 @@
 import type { Clip, FilterConfig } from '@/stores/editorStore';
 import type { CaptionSegment } from '@/stores/captionsStore';
 
+import { type CaptionStyle } from '@/lib/captionStyles';
+
 export interface ExportOptions {
   clips: Clip[];
   format: string;
@@ -8,39 +10,13 @@ export interface ExportOptions {
   resolution: string;
   burnCaptions: boolean;
   captions: CaptionSegment[];
-  captionStyle: CaptionStyleParams;
+  captionStyle: CaptionStyle;
   trimStart?: number;
   trimEnd?: number;
   mediaDuration?: number;
 }
 
-export interface CaptionStyleParams {
-  fontSize: number;
-  fontColor: string;
-  outlineColor: string;
-  outlineWidth: number;
-  shadowColor: string;
-  shadowX: number;
-  shadowY: number;
-  bgEnabled: boolean;
-  bgColor: string;
-  bgOpacity: number;
-  positionY: number; // 0-100, percentage from top
-}
-
-export const DEFAULT_CAPTION_STYLE: CaptionStyleParams = {
-  fontSize: 24,
-  fontColor: 'white',
-  outlineColor: 'black',
-  outlineWidth: 2,
-  shadowColor: 'black',
-  shadowX: 2,
-  shadowY: 2,
-  bgEnabled: false,
-  bgColor: 'black',
-  bgOpacity: 0.5,
-  positionY: 85,
-};
+// types unified in lib/captionStyles.ts
 
 const CRF_MAP: Record<string, number> = { low: 35, medium: 23, high: 18, lossless: 0 };
 
@@ -87,7 +63,7 @@ function escapeDrawtext(text: string): string {
 /** Build drawtext filter for a caption group */
 function buildCaptionDrawtext(
   words: { text: string; start: number; end: number }[],
-  style: CaptionStyleParams,
+  style: CaptionStyle,
 ): string {
   if (words.length === 0) return '';
   const text = escapeDrawtext(words.map(w => w.text).join(' '));
@@ -96,14 +72,14 @@ function buildCaptionDrawtext(
 
   let filter = `drawtext=text='${text}'`;
   filter += `:fontsize=${style.fontSize}`;
-  filter += `:fontcolor=${style.fontColor}`;
+  filter += `:fontcolor=${style.color}`;
   filter += `:x=(w-text_w)/2`;
-  filter += `:y=h*${style.positionY / 100}-text_h/2`;
+  filter += `:y=h*${style.y / 100}-text_h/2`;
   filter += `:borderw=${style.outlineWidth}`;
   filter += `:bordercolor=${style.outlineColor}`;
   filter += `:shadowx=${style.shadowX}:shadowy=${style.shadowY}:shadowcolor=${style.shadowColor}`;
 
-  if (style.bgEnabled) {
+  if (style.bgOpacity > 0) {
     filter += `:box=1:boxcolor=${style.bgColor}@${style.bgOpacity}:boxborderw=8`;
   }
 

@@ -142,7 +142,7 @@ export function CaptionsPanel() {
 
     // Split and remove: work backwards to preserve offsets
     store.pushHistory('Apply caption cuts');
-    let currentClipId = sourceClipId;
+    const currentClipId = sourceClipId;
     const sortedRegions = [...deletedRegions].sort((a, b) => b.start - a.start);
 
     for (const region of sortedRegions) {

@@ -44,9 +44,9 @@ export default function AudioTool() {
     const data = await ffmpeg.readFile('output.mp4');
     const blob = new Blob([data as unknown as BlobPart], { type: 'video/mp4' });
     const url = URL.createObjectURL(blob);
-    try { await ffmpeg.deleteFile('input'); } catch {}
-    try { await ffmpeg.deleteFile('audio_input'); } catch {}
-    try { await ffmpeg.deleteFile('output.mp4'); } catch {}
+    try { await ffmpeg.deleteFile('input'); } catch (e) { /* Intentionally empty */ }
+    try { await ffmpeg.deleteFile('audio_input'); } catch (e) { /* Intentionally empty */ }
+    try { await ffmpeg.deleteFile('output.mp4'); } catch (e) { /* Intentionally empty */ }
     store.setOutput(url, blob.size, 'replaced_audio.mp4');
   };
 

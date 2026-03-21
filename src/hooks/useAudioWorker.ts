@@ -8,7 +8,7 @@ import { useRef, useCallback, useEffect } from 'react';
 import type { WaveformData, Beat, WorkerResponse } from '@/workers/audioAnalysis.worker';
 
 interface PendingRequest {
-  resolve: (value: any) => void;
+  resolve: (value: unknown) => void;
   reject: (error: Error) => void;
 }
 
@@ -42,9 +42,10 @@ export function useAudioWorker() {
       }
     };
 
+    const currentPending = pendingRef.current;
     return () => {
       workerRef.current?.terminate();
-      pendingRef.current.clear();
+      currentPending.clear();
     };
   }, []);
 

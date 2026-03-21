@@ -82,10 +82,10 @@ export default function MergeTool() {
 
     // Cleanup
     for (let i = 0; i < files.length; i++) {
-      try { await ffmpeg.deleteFile(`input${i}.mp4`); } catch {}
+      try { await ffmpeg.deleteFile(`input${i}.mp4`); } catch (e) { /* Intentionally empty */ }
     }
-    try { await ffmpeg.deleteFile('list.txt'); } catch {}
-    try { await ffmpeg.deleteFile('output.mp4'); } catch {}
+    try { await ffmpeg.deleteFile('list.txt'); } catch (e) { /* Intentionally empty */ }
+    try { await ffmpeg.deleteFile('output.mp4'); } catch (e) { /* Intentionally empty */ }
 
     store.setOutput(url, blob.size, 'merged_video.mp4');
   };

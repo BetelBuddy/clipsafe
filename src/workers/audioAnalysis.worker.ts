@@ -28,7 +28,8 @@ export type WorkerResponse =
 
 // Waveform generation
 async function generateWaveform(buffer: ArrayBuffer, numPeaks: number = 2000): Promise<WaveformData> {
-  const audioContext = new (globalThis as any).OfflineAudioContext(1, 1, 44100);
+  const OC = (globalThis as unknown as { OfflineAudioContext: typeof OfflineAudioContext }).OfflineAudioContext;
+  const audioContext = new OC(1, 1, 44100);
   const audioBuffer = await audioContext.decodeAudioData(buffer.slice(0));
   
   const channelData = audioBuffer.getChannelData(0);
@@ -55,7 +56,8 @@ async function generateWaveform(buffer: ArrayBuffer, numPeaks: number = 2000): P
 
 // Beat detection using onset detection
 async function detectBeats(buffer: ArrayBuffer, sensitivity: number = 1.4): Promise<{ beats: Beat[]; bpm: number }> {
-  const audioContext = new (globalThis as any).OfflineAudioContext(1, 1, 44100);
+  const OC = (globalThis as unknown as { OfflineAudioContext: typeof OfflineAudioContext }).OfflineAudioContext;
+  const audioContext = new OC(1, 1, 44100);
   const audioBuffer = await audioContext.decodeAudioData(buffer.slice(0));
   
   const channelData = audioBuffer.getChannelData(0);
