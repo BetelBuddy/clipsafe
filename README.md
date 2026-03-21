@@ -24,12 +24,6 @@ ClipSafe is a powerful, professional-grade Video Editor and AI Media Platform th
 ## ⚡️ The "Zero-Upload" Magic
 Most editors say they are "private." We mean it. We use **WebAssembly (Wasm)** and **FFmpeg.js** to process everything locally. 
 
-> [!IMPORTANT]
-> **Total Project Stats:**
-> - 📄 **309+** Source Files
-> - 💎 **18,500+** Lines of Code
-> - 🚀 **200+** Built-in Tools
-> - 🧠 **AI-Powered** Layout
 
 ---
 
