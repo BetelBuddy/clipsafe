@@ -1,5 +1,3 @@
-![ClipSafe Hero Banner](public/hero-banner.png)
-
 <div align="center">
 
 # 🎬 ClipSafe: Private Browser-Based Video Editor
