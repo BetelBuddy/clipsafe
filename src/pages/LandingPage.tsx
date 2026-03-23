@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { Scissors, Minimize2, RefreshCw, Merge, Volume2, Maximize2, MessageSquare, Wrench, Lock, ChevronRight, Film, Zap, Shield, Wifi, FileImage, Undo2, Repeat, Paintbrush, Timer, Split, Grid2x2, Gauge, Activity, Sun, Moon, Twitter, ExternalLink } from 'lucide-react';
+import { Scissors, Minimize2, RefreshCw, Merge, Volume2, Maximize2, MessageSquare, Wrench, Lock, ChevronRight, Film, Zap, Shield, Wifi, FileImage, Undo2, Repeat, Paintbrush, Timer, Split, Grid2x2, Gauge, Activity, Sun, Moon, Twitter, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -208,8 +208,18 @@ export default function LandingPage() {
               rel="noopener noreferrer" 
               className="hover:text-primary transition-colors flex items-center gap-1.5 font-medium group"
             >
-              <Twitter className="w-3 h-3 fill-current" />
+              <Github className="w-3.5 h-3.5" />
               <span>@BetelBuddy</span>
+            </a>
+            <span className="text-[10px] opacity-50 select-none">|</span>
+            <a 
+              href="https://twitter.com/imkaakash" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary transition-colors flex items-center gap-1.5 font-medium group"
+            >
+              <Twitter className="w-3.5 h-3.5 fill-current" />
+              <span>@imkaakash</span>
               <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
