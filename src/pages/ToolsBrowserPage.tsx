@@ -106,7 +106,8 @@ export default function ToolsBrowserPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
           <div className="flex items-center gap-1.5 mb-4">
             <Link to="/" className="flex items-center gap-1.5">
-              <img src="/logo.png" className="w-10 md:w-16 h-10 md:h-16 object-contain" alt="ClipSafe Logo" />
+              <img src="/logo.png" className="w-10 md:w-16 h-10 md:h-16 object-contain dark:hidden" alt="ClipSafe Logo" />
+              <img src="/logo-white.png" className="w-10 md:w-16 h-10 md:h-16 object-contain hidden dark:block" alt="ClipSafe Logo" />
               <span className="font-bold text-lg">ClipSafe</span>
               <Badge variant="secondary" className="px-1.5 py-0 h-4 text-[9px] font-bold opacity-70">0.0.1 BETA</Badge>
             </Link>

@@ -68,7 +68,8 @@ export function AppSidebar({ onShortcutsClick }: AppSidebarProps) {
           to="/"
           className="flex items-center gap-1.5 px-2 py-3 hover:opacity-80 transition-opacity"
         >
-          <img src="/logo.png" className="w-12 h-12 object-contain flex-shrink-0" alt="ClipSafe Logo" />
+          <img src="/logo.png" className="w-12 h-12 object-contain flex-shrink-0 dark:hidden" alt="ClipSafe Logo" />
+          <img src="/logo-white.png" className="w-12 h-12 object-contain flex-shrink-0 hidden dark:block" alt="ClipSafe Logo" />
           {!collapsed && <span className="font-bold text-foreground">ClipSafe</span>}
         </Link>
 

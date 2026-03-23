@@ -13,7 +13,8 @@ export function FFmpegLoader({ children }: { children: React.ReactNode }) {
   if (!ffmpegLoaded) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-8 p-12">
-        <img src="/logo.png" className="w-48 h-48 object-contain animate-pulse mb-8" alt="Loading Engine" />
+        <img src="/logo.png" className="w-48 h-48 object-contain animate-pulse mb-8 dark:hidden" alt="Loading Engine" />
+        <img src="/logo-white.png" className="w-48 h-48 object-contain animate-pulse mb-8 hidden dark:block" alt="Loading Engine" />
         <div className="text-center max-w-md">
           <p className="font-medium text-lg">Loading video engine...</p>
           <p className="text-sm text-muted-foreground mt-2">

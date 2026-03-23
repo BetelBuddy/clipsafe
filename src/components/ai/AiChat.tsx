@@ -179,7 +179,8 @@ export function AiChat() {
       {/* Header */}
       <div className="flex items-center justify-between px-3 py-2 border-b border-border">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" className="w-10 h-10 object-contain" alt="ClipSafe AI" />
+          <img src="/logo.png" className="w-10 h-10 object-contain dark:hidden" alt="ClipSafe AI" />
+          <img src="/logo-white.png" className="w-10 h-10 object-contain hidden dark:block" alt="ClipSafe AI" />
           <span className="text-xs font-semibold">AI Assistant</span>
         </div>
         <div className="flex items-center gap-1">
@@ -228,7 +229,8 @@ export function AiChat() {
       <div className="flex-1 overflow-y-auto py-3 space-y-3" ref={scrollRef}>
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-muted-foreground text-xs gap-2 px-4 text-center">
-            <img src="/logo.png" className="w-40 h-40 opacity-40 object-contain mb-6" alt="ClipSafe Logo" />
+            <img src="/logo.png" className="w-40 h-40 opacity-40 object-contain mb-6 dark:hidden" alt="ClipSafe Logo" />
+            <img src="/logo-white.png" className="w-40 h-40 opacity-40 object-contain mb-6 hidden dark:block" alt="ClipSafe Logo" />
             <span className="font-medium">ClipSafe AI</span>
             <span>Ask me to edit your video. I can trim, compress, add effects, style captions, and more.</span>
             {!hasKey && (

@@ -41,7 +41,8 @@ export default function LandingPage() {
       <nav className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-1.5 font-bold text-xl">
-            <img src="/logo.png" className="w-10 md:w-20 h-10 md:h-20 object-contain" alt="ClipSafe Logo" />
+            <img src="/logo.png" className="w-10 md:w-20 h-10 md:h-20 object-contain dark:hidden" alt="ClipSafe Logo" />
+            <img src="/logo-white.png" className="w-10 md:w-20 h-10 md:h-20 object-contain hidden dark:block" alt="ClipSafe Logo" />
             <span>ClipSafe</span>
             <Badge variant="secondary" className="px-1.5 py-0 h-4 text-[9px] font-bold uppercase tracking-wider ml-1">0.0.1 Beta</Badge>
           </Link>
@@ -168,7 +169,8 @@ export default function LandingPage() {
           {steps.map((step, i) => (
             <div key={i} className="text-center">
               <div className="w-32 h-32 rounded-full bg-surface-elevated flex items-center justify-center mx-auto mb-4">
-                <img src="/logo.png" className="w-20 h-20 object-contain" alt="Step Icon" />
+                <img src="/logo.png" className="w-20 h-20 object-contain dark:hidden" alt="Step Icon" />
+                <img src="/logo-white.png" className="w-20 h-20 object-contain hidden dark:block" alt="Step Icon" />
               </div>
               <div className="text-xs font-mono text-muted-foreground mb-2">Step {i + 1}</div>
               <h3 className="font-semibold text-lg">{step.title}</h3>
@@ -195,7 +197,8 @@ export default function LandingPage() {
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
-            <img src="/logo.png" className="w-8 md:w-12 h-8 md:h-12 object-contain" alt="ClipSafe Logo" />
+            <img src="/logo.png" className="w-8 md:w-12 h-8 md:h-12 object-contain dark:hidden" alt="ClipSafe Logo" />
+            <img src="/logo-white.png" className="w-8 md:w-12 h-8 md:h-12 object-contain hidden dark:block" alt="ClipSafe Logo" />
             <span className="font-medium text-foreground">ClipSafe</span>
           </div>
           <p>Powered by FFmpeg.wasm · Professional Tools · Runs 100% in your browser</p>

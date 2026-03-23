@@ -63,7 +63,8 @@ function MobileNavSheet() {
       <SheetContent side="left" className="w-[300px] p-0 flex flex-col">
         <SheetHeader className="p-4 border-b border-border">
           <SheetTitle className="flex items-center gap-1.5">
-            <img src="/logo.png" className="w-16 h-16 object-contain" alt="ClipSafe Logo" />
+            <img src="/logo.png" className="w-16 h-16 object-contain dark:hidden" alt="ClipSafe Logo" />
+            <img src="/logo-white.png" className="w-16 h-16 object-contain hidden dark:block" alt="ClipSafe Logo" />
             <span>ClipSafe Tools</span>
           </SheetTitle>
           <div className="relative mt-2">
@@ -157,7 +158,8 @@ export default function AppLayout() {
           <header className="md:hidden flex items-center gap-2 h-14 px-4 border-b border-border bg-background/80 backdrop-blur-sm fixed top-0 w-full z-20">
             <MobileNavSheet />
             <Link to="/" className="flex items-center gap-1.5">
-              <img src="/logo.png" className="w-8 md:w-14 h-8 md:h-14 object-contain" alt="ClipSafe Logo" />
+              <img src="/logo.png" className="w-8 md:w-14 h-8 md:h-14 object-contain dark:hidden" alt="ClipSafe Logo" />
+              <img src="/logo-white.png" className="w-8 md:w-14 h-8 md:h-14 object-contain hidden dark:block" alt="ClipSafe Logo" />
               <span className="font-bold">ClipSafe</span>
               <Badge variant="secondary" className="px-1 py-0 h-3 text-[8px] font-bold opacity-70">BETA</Badge>
             </Link>
