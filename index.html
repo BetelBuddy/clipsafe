@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClipSafe — Decentralized AI Media Platform | 100% Private Video Editing</title>
-    <meta name="description" content="Edit, compress, convert, and automate video production entirely in your browser. ClipSafe is a zero-upload, privacy-first media platform powered by AI and WebAssembly. No accounts, no data leaves your device." />
+    <title>ClipSafe — Private AI Video Editor & Media Platform</title>
+    <meta name="description" content="Edit, compress, and convert video privately in your browser. ClipSafe is a zero-upload AI media platform. No accounts, your files never leave your device." />
     <meta name="keywords" content="video editor, browser video editor, private video editing, local ai, ffmpeg.wasm, webassembly, privacy, clipsafe, media tool, open source video editor" />
     <meta name="author" content="ClipSafe" />
     <meta name="version" content="0.0.1 Beta" />
@@ -58,7 +58,28 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO Fallback Content (Hidden once React hydrates) -->
+      <h1 style="display:none">ClipSafe: Private Browser-Based Video Editor</h1>
+      <p style="display:none">
+        ClipSafe is a powerful, professional-grade Video Editor and AI Media Platform that runs entirely in your browser. 
+        Trim, compress, convert, and merge videos with 100% privacy—no uploads, no accounts, and no data tracking. 
+        Powered by WebAssembly and FFmpeg.wasm for desktop-grade performance locally.
+      </p>
+      <nav style="display:none">
+        <ul>
+          <li><a href="/app/trim">Trim Video</a></li>
+          <li><a href="/app/compress">Compress Video</a></li>
+          <li><a href="/app/convert">Convert Video</a></li>
+          <li><a href="/app/merge">Merge Videos</a></li>
+          <li><a href="/app/audio">Audio Editing</a></li>
+          <li><a href="/app/resize">Resize Video</a></li>
+          <li><a href="/app/subtitles">Add Subtitles</a></li>
+          <li><a href="/app/gif">GIF Maker</a></li>
+          <li><a href="/app/tools">All Video Tools</a></li>
+        </ul>
+      </nav>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
