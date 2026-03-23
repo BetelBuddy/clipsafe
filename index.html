@@ -61,25 +61,77 @@
   <body>
     <div id="root">
       <!-- SEO Fallback Content (Hidden once React hydrates) -->
-      <h1 style="display:none">ClipSafe: Private Browser-Based Video Editor</h1>
-      <p style="display:none">
-        ClipSafe is a powerful, professional-grade Video Editor and AI Media Platform that runs entirely in your browser. 
-        Trim, compress, convert, and merge videos with 100% privacy—no uploads, no accounts, and no data tracking. 
-        Powered by WebAssembly and FFmpeg.wasm for desktop-grade performance locally.
-      </p>
-      <nav style="display:none">
-        <ul>
-          <li><a href="/app/trim">Trim Video</a></li>
-          <li><a href="/app/compress">Compress Video</a></li>
-          <li><a href="/app/convert">Convert Video</a></li>
-          <li><a href="/app/merge">Merge Videos</a></li>
-          <li><a href="/app/audio">Audio Editing</a></li>
-          <li><a href="/app/resize">Resize Video</a></li>
-          <li><a href="/app/subtitles">Add Subtitles</a></li>
-          <li><a href="/app/gif">GIF Maker</a></li>
-          <li><a href="/app/tools">All Video Tools</a></li>
-        </ul>
-      </nav>
+      <header style="display:none">
+        <h1>ClipSafe: Decentralized AI Video Editor & Private Media Platform</h1>
+        <p>
+          ClipSafe is a powerful, professional-grade Video Editor and AI Media Platform that runs entirely in your browser. 
+          By leveraging the combined power of WebAssembly (Wasm) and the FFmpeg engine, ClipSafe delivers desktop-grade 
+          video and audio processing performance directly within a secure, sandboxed web environment.
+        </p>
+        <p>
+          Unlike traditional cloud-based video editors, ClipSafe operates on a "Local-First" philosophy. This means 100% 
+          privacy for your data—no uploads, no accounts, and no tracking. Your private media files never leave your 
+          device's local storage or memory. This decentralized approach ensures that your creative workflows remain 
+          secure, anonymous, and GDPR-compliant by design.
+        </p>
+        <p>
+          Our platform includes an autonomous AI Editing Assistant. This intelligent agent uses natural language 
+          processing to understand your editorial intent, translating complex text commands into high-performance 
+          multimedia workflows. Whether you need to generate dynamic captions, perform AI-powered color correction, 
+          or automate batch conversions, ClipSafe provides the professional tools needed for modern content creation.
+        </p>
+      </header>
+
+      <main style="display:none">
+        <section>
+          <h2>Professional Browser-Side Video Tools</h2>
+          <p>
+            Explore our massive library of over 200 specialized media utilities. Each tool is optimized for speed 
+            and efficiency, handling everything from frame-accurate trimming and high-quality compression to 
+            advanced audio visualization and subtitle generation. With support for MP4, WebM, GIF, WebP, and 
+            many other formats, ClipSafe is the ultimate technical companion for creators, developers, and 
+            privacy enthusiasts alike.
+          </p>
+        </section>
+
+        <nav aria-label="Quick Access Media Tools">
+          <h3>Popular Video Editing Tools</h3>
+          <ul>
+            <li><a href="/app/trim">Trim Video and Cut Clips</a></li>
+            <li><a href="/app/compress">Compress Video File Size</a></li>
+            <li><a href="/app/convert">Convert Video Formats</a></li>
+            <li><a href="/app/merge">Merge Videos Together</a></li>
+            <li><a href="/app/audio">Edit Audio and Sound</a></li>
+            <li><a href="/app/resize">Resize and Crop Video</a></li>
+            <li><a href="/app/subtitles">Add Subtitles and Captions</a></li>
+            <li><a href="/app/gif">Convert Video to GIF</a></li>
+            <li><a href="/app/reverse">Reverse Video Playback</a></li>
+            <li><a href="/app/loop">Loop Video Clips</a></li>
+            <li><a href="/app/color">Color Correction and Filters</a></li>
+            <li><a href="/app/fps">Change Video Frame Rate</a></li>
+            <li><a href="/app/split">Split Video into Parts</a></li>
+            <li><a href="/app/speed-change">Change Video Speed</a></li>
+            <li><a href="/app/audio-visualizer">Generate Audio Visualizer</a></li>
+            <li><a href="/app/tools">Browse All Professional Tools</a></li>
+            <li><a href="/app/editor">Open AI Video Editor</a></li>
+            <li><a href="/app/flip">Flip or Mirror Video</a></li>
+            <li><a href="/app/rotate">Rotate Video Orientation</a></li>
+            <li><a href="/app/stabilize-fix">Stabilize Shaky Video</a></li>
+            <li><a href="/app/vignette">Add Vignette Effect</a></li>
+            <li><a href="/app/grayscale">Convert Video to Grayscale</a></li>
+            <li><a href="/app/sharpen">Sharpen Video Quality</a></li>
+            <li><a href="/app/denoise">Remove Video Noise</a></li>
+            <li><a href="/app/thumbnail-generator">Generate Video Thumbnails</a></li>
+          </ul>
+        </nav>
+      </main>
+
+      <footer style="display:none">
+        <p>
+          Developed by <a href="https://github.com/BetelBuddy/clipsafe">BetelBuddy</a> 
+          and powered by the <a href="https://ffmpeg.org/">FFmpeg</a> multimedia framework via WebAssembly.
+        </p>
+      </footer>
     </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
