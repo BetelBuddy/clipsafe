@@ -104,24 +104,28 @@ export default function ToolsBrowserPage() {
       {/* Header */}
       <div className="border-b border-border bg-card">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
-          <div className="flex items-center gap-1.5 mb-4">
-            <Link to="/" className="flex items-center gap-1.5">
-              <img src="/logo.png" className="w-10 md:w-16 h-10 md:h-16 object-contain dark:hidden" alt="ClipSafe Logo" />
-              <img src="/logo-white.png" className="w-10 md:w-16 h-10 md:h-16 object-contain hidden dark:block" alt="ClipSafe Logo" />
-              <span className="font-bold text-lg">ClipSafe</span>
-              <Badge variant="secondary" className="px-1.5 py-0 h-4 text-[9px] font-bold opacity-70">0.0.1 BETA</Badge>
-            </Link>
-            <span className="text-muted-foreground text-sm">/ Tools</span>
-            <span className="text-muted-foreground opacity-30 mx-1">|</span>
-            <a 
-              href="https://github.com/BetelBuddy/clipsafe" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 text-[10px] font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Twitter className="w-2.5 h-2.5 fill-current" />
-              <span>@BetelBuddy</span>
-            </a>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-1.5 min-w-0">
+              <Link to="/" className="flex items-center gap-1.5 flex-shrink-0">
+                <img src="/logo.png" className="w-8 sm:w-16 h-8 sm:h-16 object-contain dark:hidden" alt="ClipSafe Logo" />
+                <img src="/logo-white.png" className="w-8 sm:w-16 h-8 sm:h-16 object-contain hidden dark:block" alt="ClipSafe Logo" />
+                <span className="font-bold text-base sm:text-lg">ClipSafe</span>
+              </Link>
+              <div className="hidden sm:flex items-center gap-1.5 ml-2">
+                <span className="text-muted-foreground text-sm">/ Tools</span>
+                <span className="text-muted-foreground opacity-30 mx-1">|</span>
+                <a 
+                  href="https://github.com/BetelBuddy/clipsafe" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-1 text-[10px] font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Twitter className="w-2.5 h-2.5 fill-current" />
+                  <span>@BetelBuddy</span>
+                </a>
+              </div>
+            </div>
+            <Badge variant="secondary" className="px-1.5 py-0 h-4 text-[8px] font-bold opacity-70">BETA</Badge>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">

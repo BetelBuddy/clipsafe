@@ -51,24 +51,24 @@ export default function LandingPage() {
             <a href="#how" className="hover:text-foreground transition-colors">How It Works</a>
             <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="rounded-full"
+              className="rounded-full h-9 w-9 sm:h-10 sm:w-10"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 sm:h-5 sm:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 sm:h-5 sm:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Link to="/editor">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-md px-6">
+            <Link to="/editor" className="sm:inline-block">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-md px-4 sm:px-6 h-9 sm:h-10 text-xs sm:text-sm">
                 Open Editor
               </Button>
             </Link>
-            <Link to="/tools">
-              <Button variant="outline" className="border-border hover:bg-surface-elevated rounded-md px-6">
+            <Link to="/tools" className="hidden sm:inline-block">
+              <Button variant="outline" className="border-border hover:bg-surface-elevated rounded-md px-6 h-10">
                 Browse Tools
               </Button>
             </Link>
@@ -196,34 +196,34 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 order-first md:order-none">
             <img src="/logo.png" className="w-8 md:w-12 h-8 md:h-12 object-contain dark:hidden" alt="ClipSafe Logo" />
             <img src="/logo-white.png" className="w-8 md:w-12 h-8 md:h-12 object-contain hidden dark:block" alt="ClipSafe Logo" />
             <span className="font-medium text-foreground">ClipSafe</span>
           </div>
-          <p>Powered by FFmpeg.wasm · Professional Tools · Runs 100% in your browser</p>
-          <div className="flex items-center gap-4">
+          <p className="text-center md:text-left max-w-[280px] md:max-w-none">Powered by FFmpeg.wasm · Professional Tools · Runs 100% in your browser</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <span className="text-[10px] opacity-50 select-none">|</span>
+            <span className="hidden sm:inline text-[10px] opacity-50 select-none">|</span>
             <a 
               href="https://github.com/BetelBuddy/clipsafe" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-primary transition-colors flex items-center gap-1.5 font-medium group"
             >
-              <Github className="w-3.5 h-3.5" />
-              <span>@BetelBuddy</span>
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
             </a>
-            <span className="text-[10px] opacity-50 select-none">|</span>
+            <span className="hidden sm:inline text-[10px] opacity-50 select-none">|</span>
             <a 
               href="https://twitter.com/imkaakash" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-primary transition-colors flex items-center gap-1.5 font-medium group"
             >
-              <Twitter className="w-3.5 h-3.5 fill-current" />
-              <span>@imkaakash</span>
-              <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Twitter className="w-4 h-4 fill-current" />
+              <span>Twitter</span>
+              <ExternalLink className="w-2.5 h-2.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
         </div>
