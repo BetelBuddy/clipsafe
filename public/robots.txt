@@ -6,4 +6,4 @@ Sitemap: https://clipsafe-edit.vercel.app/sitemap.xml
 
 # LLMs instructions link
 # See: https://llmstxt.org/
-llms: https://clipsafe-edit.vercel.app/llms.txt
+# manifest: https://clipsafe-edit.vercel.app/llms.txt
