@@ -38,3 +38,7 @@ Thumbs.db
 *.sw?
 *.patch
 *.diff
+
+# Scripts & Automation
+scripts/
+*.py

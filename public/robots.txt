@@ -2,8 +2,8 @@ User-agent: *
 Allow: /
 
 # Sitemap link for search engines
-Sitemap: https://clipsafe.app/sitemap.xml
+Sitemap: https://clipsafe-edit.vercel.app/sitemap.xml
 
 # LLMs instructions link
 # See: https://llmstxt.org/
-llms: https://clipsafe.app/llms.txt
+llms: https://clipsafe-edit.vercel.app/llms.txt

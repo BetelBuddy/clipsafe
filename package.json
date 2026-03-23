@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/BetelBuddy/clipsafe/issues"
   },
-  "homepage": "https://clipsafe.app",
+  "homepage": "https://clipsafe-edit.vercel.app",
   "keywords": [
     "video-editor",
     "ffmpeg-wasm",

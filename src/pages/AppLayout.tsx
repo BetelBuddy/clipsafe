@@ -8,7 +8,7 @@ import { KeyboardShortcutsModal } from '@/components/KeyboardShortcutsModal';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { AppSidebar } from '@/components/AppSidebar';
 import { cn } from '@/lib/utils';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { TOOLS, CATEGORIES } from '@/lib/toolRegistry';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import {
@@ -143,6 +143,20 @@ function MobileNavSheet() {
 export default function AppLayout() {
   const { theme, setTheme } = useTheme();
   const { showHelp, setShowHelp } = useKeyboardShortcuts();
+  const location = useLocation();
+
+  // Dynamic Canonical URL for SEO
+  useEffect(() => {
+    const domain = 'https://clipsafe-edit.vercel.app';
+    const canonicalUrl = `${domain}${location.pathname}`;
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', canonicalUrl);
+  }, [location]);
 
   return (
     <SidebarProvider>

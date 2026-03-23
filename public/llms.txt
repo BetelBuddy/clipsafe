@@ -18,9 +18,9 @@ ClipSafe is a simple, privacy-first video editor that runs 100% in the web brows
 - **State**: Zustand, TanStack Query.
 
 ## Key Resources
-- [Main Landing Page](https://clipsafe.app/) - Project overview and tool discovery.
-- [AI Video Editor](https://clipsafe.app/editor) - Pro-grade timeline and AI assistant.
-- [Tools Browser](https://clipsafe.app/tools) - Full index of specialized utilities.
+- [Main Landing Page](https://clipsafe-edit.vercel.app/) - Project overview and tool discovery.
+- [AI Video Editor](https://clipsafe-edit.vercel.app/editor) - Pro-grade timeline and AI assistant.
+- [Tools Browser](https://clipsafe-edit.vercel.app/tools) - Full index of specialized utilities.
 - [GitHub Repository](https://github.com/BetelBuddy/clipsafe) - Open source code, contribution guides, and documentation.
 - [Changelog](https://github.com/BetelBuddy/clipsafe/blob/main/CHANGELOG.md) - Release history for Version 0.0.1 Beta.
 
